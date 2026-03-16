@@ -1,44 +1,126 @@
 body{
-font-family: Poppins, sans-serif;
+font-family: Arial, sans-serif;
 background:#ffffff;
-text-align:center;
 margin:0;
+text-align:center;
+color:#222;
 }
+
+/* HEADER */
 
 header{
 background:#7B6CFF;
 color:white;
-padding:15px;
+padding:16px;
+font-size:22px;
+font-weight:bold;
 }
+
+/* MAIN CONTAINER */
 
 .container{
 padding:20px;
 }
 
+/* BUTTONS */
+
 button{
 background:#7B6CFF;
 color:white;
 border:none;
-padding:12px 20px;
+padding:12px 18px;
 margin:10px;
 border-radius:12px;
 font-size:16px;
+cursor:pointer;
 }
+
+button:hover{
+opacity:0.9;
+}
+
+/* HIDDEN SECTIONS */
 
 .hidden{
 display:none;
 }
 
-canvas{
-margin:20px auto;
-display:block;
-}
+/* INPUT */
 
-.names input{
+input{
 padding:10px;
 border-radius:10px;
 border:1px solid #ccc;
+margin-top:10px;
 }
+
+/* IMAGE PREVIEW */
+
+#imagePreview{
+max-width:250px;
+margin-top:15px;
+border-radius:12px;
+}
+
+/* SHARE CANVAS */
+
+#shareCanvas{
+display:none;
+}
+
+/* DISCLAIMER TEXT */
+
+.disclaimer{
+font-size:14px;
+color:#666;
+margin-bottom:10px;
+}
+
+/* LOADING SPINNER */
+
+.loader-circle{
+border:6px solid #E9E6FF;
+border-top:6px solid #7B6CFF;
+border-radius:50%;
+width:50px;
+height:50px;
+animation:spin 1s linear infinite;
+margin:auto;
+margin-top:20px;
+}
+
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+#loading{
+margin-top:20px;
+}
+
+/* SPIN WHEEL */
+
+canvas{
+display:block;
+margin:auto;
+margin-top:20px;
+}
+
+/* POINTER */
+
+#pointer{
+width:0;
+height:0;
+border-left:15px solid transparent;
+border-right:15px solid transparent;
+border-bottom:25px solid #7B6CFF;
+margin:auto;
+position:relative;
+top:10px;
+z-index:2;
+}
+
+/* NAME LIST */
 
 ul{
 list-style:none;
@@ -50,4 +132,20 @@ background:#E9E6FF;
 margin:5px;
 padding:8px;
 border-radius:10px;
+}
+
+/* RESULT TEXT */
+
+#result{
+margin-top:20px;
+font-size:18px;
+}
+
+/* WINNER TEXT */
+
+#winner{
+font-size:22px;
+margin-top:20px;
+color:#7B6CFF;
+font-weight:bold;
 }
