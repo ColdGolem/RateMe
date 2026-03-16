@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SaaS</title>
+
+<title>SaaS - RateMe</title>
+
 <link rel="stylesheet" href="style.css">
+
+<!-- Cropper -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></script>
+
+<!-- Spin Wheel -->
+<script src="https://cdn.jsdelivr.net/npm/winwheel@2.7.0/Winwheel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<!-- Confetti -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
 </head>
+
 
 <body>
 
@@ -13,37 +29,87 @@
 <h1>SaaS</h1>
 </header>
 
+
 <div class="container">
 
 <!-- HOME -->
+
 <div id="home">
-<button onclick="showJudge()">Upload Photo</button>
+
+<button onclick="showJudge()">Upload Selfie</button>
+
 <button onclick="showWheel()">Spin Wheel</button>
+
+<button onclick="openPrivacy()">Privacy Policy</button>
+
 </div>
 
-<!-- PHOTO JUDGE -->
+
+
+<!-- SELFIE JUDGE -->
+
 <div id="judge" class="hidden">
+
+<p class="disclaimer">
+Upload a selfie for fun rating.  
+Results are randomly generated for entertainment.
+</p>
+
 <input type="file" id="photoInput" accept="image/*">
+
+<div>
+
+<img id="imagePreview">
+
+</div>
+
+<button onclick="cropImage()">Crop</button>
+
 <button onclick="ratePhoto()">Judge</button>
+
+
+<div id="loading" class="hidden">
+
+<div class="loader-circle"></div>
+
+<p>Analyzing face...</p>
+
+</div>
+
 
 <div id="result"></div>
 
+
+<button onclick="generateCard()">Share Card</button>
+
+
+<canvas id="shareCanvas" width="400" height="520"></canvas>
+
+
 <button onclick="backHome()">Back</button>
+
 </div>
+
+
+
 
 <!-- SPIN WHEEL -->
+
 <div id="wheelPage" class="hidden">
 
-<canvas id="wheel" width="300" height="300"></canvas>
+<h2>Decision Wheel</h2>
 
-<div class="names">
+<div id="pointer"></div>
+
+<canvas id="wheelCanvas" width="320" height="320"></canvas>
+
 <input id="nameInput" placeholder="Enter name">
+
 <button onclick="addName()">Add</button>
-</div>
 
 <ul id="nameList"></ul>
 
-<button onclick="spinWheel()">SPIN</button>
+<button onclick="startSpin()">SPIN</button>
 
 <div id="winner"></div>
 
@@ -51,10 +117,14 @@
 
 </div>
 
+
 </div>
 
+
 <script src="replies.js"></script>
+
 <script src="script.js"></script>
 
 </body>
+
 </html>
