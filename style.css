@@ -1,1 +1,53 @@
+body{
+font-family: Poppins, sans-serif;
+background:#ffffff;
+text-align:center;
+margin:0;
+}
 
+header{
+background:#7B6CFF;
+color:white;
+padding:15px;
+}
+
+.container{
+padding:20px;
+}
+
+button{
+background:#7B6CFF;
+color:white;
+border:none;
+padding:12px 20px;
+margin:10px;
+border-radius:12px;
+font-size:16px;
+}
+
+.hidden{
+display:none;
+}
+
+canvas{
+margin:20px auto;
+display:block;
+}
+
+.names input{
+padding:10px;
+border-radius:10px;
+border:1px solid #ccc;
+}
+
+ul{
+list-style:none;
+padding:0;
+}
+
+li{
+background:#E9E6FF;
+margin:5px;
+padding:8px;
+border-radius:10px;
+}
