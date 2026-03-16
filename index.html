@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaaS</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<header>
+<h1>SaaS</h1>
+</header>
+
+<div class="container">
+
+<!-- HOME -->
+<div id="home">
+<button onclick="showJudge()">Upload Photo</button>
+<button onclick="showWheel()">Spin Wheel</button>
+</div>
+
+<!-- PHOTO JUDGE -->
+<div id="judge" class="hidden">
+<input type="file" id="photoInput" accept="image/*">
+<button onclick="ratePhoto()">Judge</button>
+
+<div id="result"></div>
+
+<button onclick="backHome()">Back</button>
+</div>
+
+<!-- SPIN WHEEL -->
+<div id="wheelPage" class="hidden">
+
+<canvas id="wheel" width="300" height="300"></canvas>
+
+<div class="names">
+<input id="nameInput" placeholder="Enter name">
+<button onclick="addName()">Add</button>
+</div>
+
+<ul id="nameList"></ul>
+
+<button onclick="spinWheel()">SPIN</button>
+
+<div id="winner"></div>
+
+<button onclick="backHome()">Back</button>
+
+</div>
+
+</div>
+
+<script src="replies.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
